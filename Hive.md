@@ -37,3 +37,24 @@ WHERE
 f.origin='SFO' or f.dest='SFO';
 ```
 ### create a partioned table and load data into it from local
+``` sql
+create table weather_partitioned(
+station_name string,
+DayOfMonth int,
+precipitation int,
+temperature_max int,
+temperature_min int)
+partitioned by (year int, month int)
+stored as orc;
+
+alter table weather_partitioned add PARTITION (year=2008,month=1);
+
+insert into table weather_partitioned PARTITION(year=2008, month=1)
+select station_name string,
+DayOfMonth int,
+precipitation int,
+temperature_max int,
+temperature_min int from sfo_weather 
+where
+year =2008 and month=1;
+```
