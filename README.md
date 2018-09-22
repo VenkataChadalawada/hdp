@@ -31,9 +31,10 @@ a1.sinks.k1.channel = c1
 #### Running the file
 Go to flume-server location
 ` cd /usr/hdp/current/flume-server `
-flume-ng agent -n a1 -f /home/horton/solutions/flume-ng.properties -c conf
+and type
+`flume-ng agent -n a1 -f /home/horton/solutions/flume-ng.properties -c conf`
 
 
 #### In other terminal
-telnet localhost 44444
+`telnet localhost 44444`
 hello world!
