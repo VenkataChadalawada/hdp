@@ -1,6 +1,6 @@
 # Sqoop
 ## Sqoop export
-``` sql
+``` sqoop
 sqoop export 
 --connect "jdbc:mysql://namenode:3306/flightinfo"
 --username root
