@@ -13,7 +13,7 @@ ROW FORMAT DELIMITED
 FIELDS TERMINATED BY','
 STORED AS TEXTFILE;
 
-LOAD DATA LOCAL INPATH '/home/horton/datasets/flightdelays/sfo_weather.csv INTO TABLE sfo_weather_staging;
+LOAD DATA LOCAL INPATH '/home/horton/datasets/flightdelays/sfo_weather.csv' INTO TABLE sfo_weather_staging;
 
 CREATE TABLE sfo_weather as select * from sfo_weather_staging; 
 // ORC table creation from staging table as we cant directly create orc table from local csv files
