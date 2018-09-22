@@ -30,9 +30,9 @@ a1.sinks.k1.channel = c1
 ```
 #### Running the file
 Go to flume-server location
-` cd /usr/hdp/current/flume-server `
+- ` cd /usr/hdp/current/flume-server `
 and type
-`flume-ng agent -n a1 -f /home/horton/solutions/flume-ng.properties -c conf`
+- `flume-ng agent -n a1 -f /home/horton/solutions/flume-ng.properties -c conf`
 
 
 #### In other terminal
